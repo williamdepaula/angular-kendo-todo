@@ -1,0 +1,7 @@
+<div>
+	<h1>Minha lista de Tarefas</h1>
+	<input kendoTextBox type="text" placeholder="Add item para fazer" #itemInput (keyup.enter)="addTodo(itemInput)" />
+	<div>
+		<button kendoButton type="button" *ngFor="let todo of todos; index as i;" ><span (click)="removeTodo(todo, i)">{{todo.item}}</span></button>
+	</div>
+</div>
